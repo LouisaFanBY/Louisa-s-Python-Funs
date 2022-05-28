@@ -10,8 +10,8 @@ picx = 0
 picy = 0
 BLACK = (0,0,0)
 timer = pygame.time.Clock()
-speedx = 50
-speedy = 50
+speedx = 27
+speedy = 99
 
 # create a list of pics and locations
 pics = list()
