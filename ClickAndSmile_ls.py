@@ -15,14 +15,12 @@ def draw_smiley(x,y):
     t.fillcolor("pink")
     t.begin_fill()
     # draw a squre
-    t.forward(50)
-    t.left(90)
-    t.forward(50)
-    t.left(90)
-    t.forward(50)
-    t.left(90)
-    t.forward(50)
-    
+    t.forward(100)
+    t.left(120)
+    t.forward(100)
+    t.left(120)
+    t.forward(100)
+
     t.end_fill()
 
 turtle.onscreenclick(draw_smiley)
