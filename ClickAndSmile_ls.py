@@ -17,6 +17,20 @@ def draw_smiley(x,y):
     t.circle(50)
     t.end_fill()
     # Left eye
-    
+    t.penup()
+    t.setpos(x-15, y+60)
+    t.pendown()
+    t.fillcolor("green")
+    t.begin_fill()
+    t.circle(10)
+    t.end_fill()
+    # Right eye
+    t.penup()
+    t.setpos(x+15, y+60)
+    t.pendown()
+    t.fillcolor("blue")
+    t.begin_fill()
+    t.circle(10)
+    t.end_fill()
 
 turtle.onscreenclick(draw_smiley)
