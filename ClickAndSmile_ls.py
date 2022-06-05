@@ -33,7 +33,9 @@ def draw_smiley(x,y):
     pen.circle(10)
     pen.end_fill()
     # Mouth
+    pen.penup()
     pen.setpos(x-25, y+40)
+    pen.pendown()
     pen.pencolor("white")
     pen.width(10)
     pen.goto(x-10, y+20)
