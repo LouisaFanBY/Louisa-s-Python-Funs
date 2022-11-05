@@ -3,7 +3,7 @@ import pygame
 import random
 BLACK = (0,0,0)
 pygame.init()
-screen = pygame.display.set_mode([800,600])
+screen = pygame.display.set_mode([1400,700])
 pygame.display.set_caption("Smiley Explosion by Louisa")
 mousedown = False
 keep_going = True
@@ -28,6 +28,7 @@ class Smiley(pygame.sprite.Sprite):
         self.rect.y = pos[1] - self.scale/2
         self.xvel = xvel
         self.yvel = yvel
+        print("self.scale = ", self.scale, " speedx = ", self.xvel, "speedy = ", self.yvel)
     def update(self):
         self.rect.x += self.xvel
         self.rect.y += self.yvel
