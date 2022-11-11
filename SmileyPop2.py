@@ -18,3 +18,14 @@ pop = pygame.mixer.Sound("pop.wav")
 font = pygame.font.SysFont("Arial", 24)
 count_smileys = 0
 count_popped = 0
+class Smiley(pygame.sprite.Sprite):
+    pos = (0,0)
+    xvel = 1
+    yvel = 1
+    scale = 100
+    def __init__(self, pos, xvel, yvel):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pic
+        self.scale = random.randrange(10,100)
+        self.image = pygame.transform.scale(self.image,
+        (self.scale,self.scale))
