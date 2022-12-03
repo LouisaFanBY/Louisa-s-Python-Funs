@@ -56,7 +56,7 @@ while keep_going:
                 if  len(clicked_smileys) > 0:
                     pop.play()
                     count_popped += len(clicked_smileys)
-        if event.type ==pygame.mousebuttonup:
+        if event.type ==pygame.MOUSEBUTTONUP:
             mousedown = False
     screen.fill(BLACK)
     sprite_list.update()
