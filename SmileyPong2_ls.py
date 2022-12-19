@@ -48,3 +48,33 @@ while keepGoing:   # Game loop
         speedy = -5
         speedx = 5
         picy = 499
+        screen.fill(BLACW)
+        screen.blit(pic, (picx, picy))
+        # Draw paddle
+        paddlex = pygame.mouse.get_pos()[0]
+        paddlex -= paddlew/2
+        pygame.draw.rect(screen, WHITE, (paddlex, paddley, paddlew, paddleh))
+        # Check for paddle bounce
+        if picy + pich >= paddley and picy + pich <= paddleh \
+            and speedy > 0:
+             if picx + picw/2 >= paddlex and picx + picw/2 <= paddlex + \
+                paddlew:
+                 speedy = -speedy
+                 points += 1
+        # Draw text on screen
+        draw_string = "Lives: " + str(lives) + " Points: " + str(points)
+        # Check whether the game is over
+        if lives < 1:
+            speedx = speedy = 0
+            draw_string = "Game Over. Your score was: " + str(points)
+            draw_string += ". Press F1 to play again. "
+
+        text = font.render(draw_string, True, WHITE)
+        text_rect = text.get_rect()
+        text_rect.centerx = screen.get_rect().centerx
+        text_rect.y = 10
+        screen.blit(text, text_rect)
+        pygame.display.update()
+        timer.tick(60)
+
+pygame.quit()       # Exit
